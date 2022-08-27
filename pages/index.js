@@ -1,8 +1,18 @@
 /* pages/index.js */
 import Head from "next/head";
 import {withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
-
+import { useEffect } from "react";
+import { Auth } from "aws-amplify";
 function Home() {
+  useEffect(() => {
+    checkUser();
+  }),
+  async function checkUser() {
+    const user = await Auth.currentAuthenticatedUser();
+    console.log("user:", user);
+    console.log("user.attributes:", user.attributes);
+  }
+
   return (
     <div>
       <Head>
