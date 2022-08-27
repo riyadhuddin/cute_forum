@@ -1,5 +1,6 @@
 /* pages/index.js */
 import Head from "next/head";
+import {withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
 
 function Home() {
   return (
@@ -31,6 +32,7 @@ text-gray-500">
             </div>
           </div>
         </main>
+        <AmplifySignOut />;
       </div>
 
       <footer></footer>
@@ -38,4 +40,4 @@ text-gray-500">
   );
 }
 
-export default Home;
+export default withAuthenticator(Home);
