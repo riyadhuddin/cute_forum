@@ -1,0 +1,16 @@
+{
+  "resourceName": "s3412a5a76",
+  "policyUUID": "412a5a76",
+  "bucketName": "cuteforum36136867ac484b9c86411a67a4063f03",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "READ"
+  ],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}
